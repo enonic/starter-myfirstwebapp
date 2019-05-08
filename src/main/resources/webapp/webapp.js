@@ -1,10 +1,20 @@
-var thymeleaf = require('/lib/thymeleaf'); // Load template engine
-
-var view = resolve('hello.html') // Lookup template file
-var model = { // Build model object
-  title: "Hello Web app"
-};
-
 exports.get = function (req) {
-  body: thymeleaf.render(view, model) // Render page
+
+var title = "Hello Web app";
+
+  return  {
+    body: `
+<html>
+  <head>
+    <title>${title}</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+  <body>
+      <h1>Sweet, "${title}" is working!</h1>
+      <img src="html5logo.svg"/>
+  </body>
+</html>
+`
+  }
+
 };
