@@ -1,9 +1,7 @@
 exports.get = function (req) {
-
-var title = "Hello Web app";
-
+  var title = "Hello Web app";
   return  {
-    body: `
+  body: `
 <html>
   <head>
     <title>${title}</title>
@@ -16,5 +14,4 @@ var title = "Hello Web app";
 </html>
 `
   }
-
 };
