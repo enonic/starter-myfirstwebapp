@@ -1,5 +1,5 @@
 exports.get = function (req) {
-  var title = "Hello Web app";
+  var title = 'Hello Web app';
   return  {
   body: `
 <html>
